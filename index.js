@@ -42,7 +42,7 @@ function main(ev) {
 		ctx.fillStyle = "black";
 
 		//แสดงตำแหน่งของเมาส์
-		ctx.fillText("Mouse: " + mousePos.x + ", " + mousePos.y, config.width - 130, 20);
+		ctx.fillText("Mouse: " + mousePos.x + ", " + mousePos.y, config.width - 125, 20);
 		
 		// ภูเขาขนาดกลาง ลูก 1
 		ctx.beginPath();
@@ -122,10 +122,10 @@ function main(ev) {
 		ctx.lineTo(260, 590);
 		ctx.lineTo(10, 590);
 		ctx.closePath();
-		ctx.fillStyle = "rgba(167, 125, 66, 1)";
+		ctx.fillStyle = "rgba(90, 155, 50, 1)";
 		ctx.fill();
 		ctx.lineWidth = 8;
-		ctx.strokeStyle = "rgba(20, 57, 16, 0.91)";
+		ctx.strokeStyle = "rgba(51, 57, 16, 0.91)";
 		ctx.stroke();
 
 		//แบ่งท้องนา 3 * 5 ช่อง
@@ -371,7 +371,7 @@ function main(ev) {
 		}
 
 		// เมฆเคลื่อนที่จากขวาไปซ้าย
-		cloadx -= speedx * 0.02; // ปรับความเร็วได้ที่นี่
+		cloadx -= speedx * 0.3; // ปรับความเร็วได้ที่นี่
 		if (cloadx < - 300) {
 			cloadx = config.width ;
 		}
@@ -389,7 +389,7 @@ function main(ev) {
 			ctx.fill();
 		}
 	
-		cloadx2 -= speedx * 0.03; // ปรับความเร็วได้ที่นี่
+		cloadx2 -= speedx * 0.2; // ปรับความเร็วได้ที่นี่
 		if (cloadx2 < - 400) {
 		cloadx2 = config.width - 300 ;
 		}
