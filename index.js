@@ -371,7 +371,7 @@ function main(ev) {
 		}
 
 		// เมฆเคลื่อนที่จากขวาไปซ้าย
-		cloadx -= speedx * 0.01; // ปรับความเร็วได้ที่นี่
+		cloadx -= speedx * 0.02; // ปรับความเร็วได้ที่นี่
 		if (cloadx < - 300) {
 			cloadx = config.width ;
 		}
@@ -389,7 +389,7 @@ function main(ev) {
 			ctx.fill();
 		}
 	
-		cloadx2 -= speedx * 0.02; // ปรับความเร็วได้ที่นี่
+		cloadx2 -= speedx * 0.03; // ปรับความเร็วได้ที่นี่
 		if (cloadx2 < - 400) {
 		cloadx2 = config.width - 300 ;
 		}
