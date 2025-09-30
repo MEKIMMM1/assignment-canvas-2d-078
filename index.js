@@ -81,9 +81,9 @@ function main(ev) {
 		ctx.fill();
 		
 		//รัสมีพระอาทิตย์
-		const gradient = ctx.createRadialGradient(450, 60, 10, 450, 60, 55); // จุดศูนย์กลาง (450, 60), รัศมีใน (10), รัศมีนอก (55)
-		gradient.addColorStop(0, "rgba(195, 79, 44, 0.92)"); // สีภายใน
-		gradient.addColorStop(1, "rgba(239, 174, 21, 0.74)"); // สีภายนอก
+		const gradient = ctx.createRadialGradient(450, 60, 15, 450, 60, 55); // จุดศูนย์กลาง (450, 60), รัศมีใน (10), รัศมีนอก (55)
+		gradient.addColorStop(0, "rgba(255, 60, 0, 0.62)"); // สีภายใน
+		gradient.addColorStop(1, "rgba(239, 174, 21, 0.4)"); // สีภายนอก
 		//วงกลมรัศมีพระอาทิตย์
 		ctx.beginPath(); 
 		ctx.arc(450, 60, 50, 0, Math.PI * 2); // วาดวงกลมที่มีรัศมี 50
@@ -99,6 +99,7 @@ function main(ev) {
 		//ส่วนของสีและเส้นขอบ
 		ctx.fillStyle = "rgba(241, 178, 30, 0.77)";
 		ctx.fill();
+	
 
 		//เส้นตรงตัดภูเขา
 		ctx.beginPath();
@@ -106,13 +107,13 @@ function main(ev) {
 		ctx.lineTo(800, 220);
 		ctx.closePath();
 		ctx.strokeStyle = "rgba(0, 0, 0, 1)";
-		ctx.lineWidth = 3;
+		ctx.lineWidth = 2;
 		ctx.stroke();
 
 
 		//พื้นที่ของทุ่งหญ้า
 		ctx.fillStyle = "rgba(33, 100, 33, 1)";
-		ctx.fillRect(0, 220, 800, 400);
+		ctx.fillRect(0, 220, 800, 380);
 
 		//ท้องนา
 		ctx.beginPath();
@@ -146,7 +147,7 @@ function main(ev) {
 		const riceEndY = 590;   // จุดสิ้นสุดแนวตั้งของทุ่งนา
 		const riceStartX = 20;  // จุดเริ่มต้นแนวนอน
 		const riceEndX = 265;   // จุดสิ้นสุดแนวนอน
-		const riceStepX = 38.5;   // ระยะห่างแต่ละต้นแนวนอน
+		const riceStepX = 39;   // ระยะห่างแต่ละต้นแนวนอน
 		const riceStepY = 23.9;   // ระยะห่างแต่ละต้นแนวตั้ง
 		for (let y = riceStartY; y < riceEndY; y += riceStepY) {
 			for (let x = riceStartX; x < riceEndX; x += riceStepX) {
@@ -370,7 +371,7 @@ function main(ev) {
 		}
 
 		// เมฆเคลื่อนที่จากขวาไปซ้าย
-		cloadx -= speedx * 5; // ปรับความเร็วได้ที่นี่
+		cloadx -= speedx * 0.01; // ปรับความเร็วได้ที่นี่
 		if (cloadx < - 300) {
 			cloadx = config.width ;
 		}
@@ -388,7 +389,7 @@ function main(ev) {
 			ctx.fill();
 		}
 	
-		cloadx2 -= speedx * 2; // ปรับความเร็วได้ที่นี่
+		cloadx2 -= speedx * 0.02; // ปรับความเร็วได้ที่นี่
 		if (cloadx2 < - 400) {
 		cloadx2 = config.width - 300 ;
 		}
